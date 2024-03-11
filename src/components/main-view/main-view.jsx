@@ -13,8 +13,8 @@ export const MainView = () => {
         console.log(response);
         return response.json()
       })
-      .then((moviesFromApi) => { // Прямое использование полученных данных, если они соответствуют структуре, описанной в вашем примере
-        const formattedMovies = moviesFromApi.map((movie) => { // Используем movie для обозначения каждого элемента в массиве
+      .then((moviesFromApi) => { 
+        const formattedMovies = moviesFromApi.map((movie) => { 
           return {
             _id: movie._id,
             Title: movie.Title,
@@ -31,7 +31,7 @@ export const MainView = () => {
             ImagePath: movie.ImagePath || 'default-placeholder-image-url.jpg',
           };
         });
-        setMovies(formattedMovies); // Обновляем состояние с отформатированными данными
+        setMovies(formattedMovies);
       })
       .catch((error) => {
         console.error("There was a problem with your fetch operation:", error);
