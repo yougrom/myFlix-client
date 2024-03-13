@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const MovieView = ({ movie, onBackClick }) => {
+
+    console.log('Movie: ', movie);
+
     return (
         <div className="movie-view">
             <div className="movie-poster">
